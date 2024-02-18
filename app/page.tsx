@@ -25,35 +25,31 @@ export default function Home() {
     },
   ];
   return (
-    <ScrollArea>
-      <main className="h-full w-full flex-1 mt-32 text-center">
-        <h1 className="text-4xl md:text-6xl font-semibold">
-          John Rod Dondoyano
-        </h1>
-        <p className="text-muted-foreground font-thin">
-          Musician | Developer | Average
+    <main className=" w-full flex-1 mt-32 text-center global-padding">
+      <h1 className="text-4xl md:text-6xl font-semibold">John Rod Dondoyano</h1>
+      <p className="text-muted-foreground font-thin">
+        Musician | Developer | Average
+      </p>
+      <p className="mt-8">
+        With the power of my hands, I can create both melodious piano covers and
+        sleek websites.
+      </p>
+      <div className="w-full rounded-[0.5rem] mt-8 space-y-8 ">
+        <p className="font-semibold text-2xl flex justify-center items-center">
+          Achievements <GiAchievement className="text-4xl" />
         </p>
-        <p className="mt-8">
-          With the power of my hands, I can create both melodious piano covers
-          and sleek websites.
-        </p>
-        <div className="w-full rounded-[0.5rem] mt-8 space-y-8 ">
-          <p className="font-semibold text-2xl flex justify-center items-center">
-            Achievements <GiAchievement className="text-4xl" />
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2  gap-4 sm:gap-8">
-            {achievements.map((ach, idx) => {
-              return (
-                <Achivement
-                  key={`${idx}`}
-                  icon={ach.icon}
-                  descriptions={ach.descriptions}
-                />
-              );
-            })}
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-4 sm:gap-8">
+          {achievements.map((ach, idx) => {
+            return (
+              <Achivement
+                key={`${idx}`}
+                icon={ach.icon}
+                descriptions={ach.descriptions}
+              />
+            );
+          })}
         </div>
-      </main>
-    </ScrollArea>
+      </div>
+    </main>
   );
 }

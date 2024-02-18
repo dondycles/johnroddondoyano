@@ -15,7 +15,7 @@ import { ThemeBtn } from "@/components/theme-btn";
 import Socials from "./socials";
 export default function Nav() {
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex items-center justify-between fixed top-0 left-0 w-full nav-padding z-10 backdrop-blur-sm ">
       <Link href={"/"} className="font-medium text-2xl ">
         <Image src={icon} alt="JR" width={48} height={48} />
       </Link>

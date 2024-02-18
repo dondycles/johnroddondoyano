@@ -78,3 +78,6 @@
 .global-padding {
   @apply py-4 md:py-8 px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64;
 }
+.nav-padding {
+  @apply py-4  px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64;
+}

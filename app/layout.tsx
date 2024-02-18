@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-poppins antialiased global-padding flex flex-col w-full h-[100dvh] gap-4 leading-8`}
+        className={`${poppins.variable} font-poppins antialiased w-full max-h-[100dvh] h-screen leading-8  `}
       >
         <ThemeProvider
           attribute="class"
