@@ -41,7 +41,7 @@ export default function Home() {
           <p className="font-semibold text-2xl flex justify-center items-center">
             Achievements <GiAchievement className="text-4xl" />
           </p>
-          <div className="grid grid-cols-2  gap-4 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2  gap-4 sm:gap-8">
             {achievements.map((ach, idx) => {
               return (
                 <Achivement
