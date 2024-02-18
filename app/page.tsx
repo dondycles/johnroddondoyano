@@ -1,6 +1,5 @@
 "use client";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { PiPianoKeysFill } from "react-icons/pi";
 import { FaLaptopCode, FaSpotify, FaYoutube } from "react-icons/fa6";
 import { GiAchievement } from "react-icons/gi";
@@ -26,7 +25,7 @@ export default function Home() {
     },
   ];
   return (
-    <main className=" w-full flex-1 mt-32 text-center global-padding">
+    <main className="w-full flex-1 mt-32 text-center global-padding">
       <h1 className="text-4xl md:text-6xl font-semibold">John Rod Dondoyano</h1>
       <p className="text-muted-foreground font-thin">
         Musician | Developer | Average
@@ -51,10 +50,9 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div>
+      <footer>
         <Socials classNames="w-full mt-8 text-2xl justify-center" />
-      </div>
-      <p className=" mt-4 text-xs text-muted-foreground">John Rod Dondoyano</p>
+      </footer>
     </main>
   );
 }

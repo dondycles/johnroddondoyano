@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-poppins antialiased w-full max-h-[100dvh] h-screen leading-8  `}
+        className={`${poppins.variable} font-poppins antialiased leading-8 overflow-hidden `}
       >
         <ThemeProvider
           attribute="class"
@@ -32,8 +32,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Nav />
-          {children}
+          <div className="max-h-[100dvh] w-full flex flex-col overflow-auto">
+            <Nav />
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
