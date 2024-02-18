@@ -5,6 +5,7 @@ import { PiPianoKeysFill } from "react-icons/pi";
 import { FaLaptopCode, FaSpotify, FaYoutube } from "react-icons/fa6";
 import { GiAchievement } from "react-icons/gi";
 import Achivement from "@/components/cards/achivement";
+import Socials from "@/components/shared/socials";
 export default function Home() {
   const achievements = [
     {
@@ -50,6 +51,10 @@ export default function Home() {
           })}
         </div>
       </div>
+      <div>
+        <Socials classNames="w-full mt-8 text-2xl justify-center" />
+      </div>
+      <p className=" mt-4 text-xs text-muted-foreground">John Rod Dondoyano</p>
     </main>
   );
 }
