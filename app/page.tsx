@@ -147,10 +147,10 @@ export default function Home() {
         </div>
       </div>
       <h2 className="max-w-[800px] mx-auto">
-        As a growing pianist on YouTube and an aspiring professional in the
-        field of web development, I am driven by a dual passion for music and
-        technology, harboring ambitions for a distinguished career trajectory in
-        both domains.
+        A growing pianist on YouTube and an aspiring professional in the field
+        of web development, driven by a dual passion for music and web
+        development, harboring ambitions for a distinguished career trajectory
+        in both domains.
       </h2>
 
       {/* <div className="w-full rounded-[0.5rem] mt-8 space-y-8 ">
@@ -180,6 +180,7 @@ export default function Home() {
             <DropdownMenuItem>Web Development</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
+        <Button variant={"outline"}>Biography</Button>
       </div>
       <div className=" mb-0 mt-auto w-full grid grid-cols-1 xs:grid-cols-3 gap-4 text-sm">
         <div className="  text-left flex flex-col gap-1 text-muted-foreground">
