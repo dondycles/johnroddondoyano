@@ -44,7 +44,7 @@ export default function Home() {
             <TooltipTrigger asChild>
               <DialogTrigger>
                 <Image
-                  className="h-32 w-32 fill-foreground mx-auto"
+                  className="h-32 w-32 fill-foreground mx-auto dark:invert"
                   alt="r"
                   src={jrlogo}
                 />
@@ -63,12 +63,12 @@ export default function Home() {
                     <TableCell>
                       <div className="flex w-full justify-center gap-4">
                         <Image
-                          className="h-16 w-fit fill-foreground "
+                          className="h-16 w-fit fill-foreground  dark:invert"
                           alt="JR"
                           src={jlogo}
                         />
                         <Image
-                          className="h-16 w-fit fill-foreground"
+                          className="h-16 w-fit fill-foreground  dark:invert"
                           alt="JR"
                           src={rlogo}
                         />
@@ -82,12 +82,12 @@ export default function Home() {
                   <TableRow>
                     <TableCell>
                       <div className="flex w-fit gap-4 mx-auto">
-                        <div className="bg-black/50 h-24 w-[1px] ml-2"></div>
-                        <div className="bg-black h-16 w-4 -mr-6"></div>
-                        <div className="bg-black/50 h-24 w-[1px]"></div>
-                        <div className="bg-black h-16 w-4 -mr-6"></div>
-                        <div className="bg-black/50 h-24 w-[1px]"></div>
-                        <div className="bg-black/50 h-24 w-[1px] ml-2"></div>
+                        <div className="bg-foreground/50 h-24 w-[1px] ml-2"></div>
+                        <div className="bg-foreground h-16 w-4 -mr-6"></div>
+                        <div className="bg-foreground/50 h-24 w-[1px]"></div>
+                        <div className="bg-foreground h-16 w-4 -mr-6"></div>
+                        <div className="bg-foreground/50 h-24 w-[1px]"></div>
+                        <div className="bg-foreground/50 h-24 w-[1px] ml-2"></div>
                       </div>
                     </TableCell>
                     <TableCell>
@@ -98,7 +98,7 @@ export default function Home() {
                   <TableRow>
                     <TableCell>
                       <Image
-                        className="h-24 w-24 fill-foreground mx-auto"
+                        className="h-24 w-24 fill-foreground mx-auto  dark:invert"
                         alt="note"
                         src={note}
                       />
