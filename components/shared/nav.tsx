@@ -21,7 +21,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import JrLogo from "./jr-logo";
 export default function Nav() {
   return (
-    <header className=" top-0 left-0 w-full nav-padding z-10 backdrop-blur-sm bg-background/80 sticky">
+    <header className=" top-0 left-0 w-full nav-padding z-10 backdrop-blur-sm bg-background/80 sticky border-b-border border-b-[1px] ">
       <div className="flex items-center justify-between ">
         <Link href={"/"} className="font-medium text-2xl ">
           <JrLogo className="h-8 w-8" />
