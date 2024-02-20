@@ -46,12 +46,11 @@ export default function Nav() {
 
         <ThemeBtn classNames="sm:hidden ml-auto mr-4" />
         <Sheet>
-          <Button asChild size={"icon"}>
+          <Button asChild size={"icon"} variant={"ghost"}>
             <SheetTrigger className="sm:hidden">
               <MdOutlineMenu className="text-2xl" />
             </SheetTrigger>
           </Button>
-
           <SheetContent className="flex flex-col gap-4">
             <Link href={"/"} className="font-medium text-2xl ">
               <Image

@@ -32,7 +32,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-h-[100dvh] w-full flex flex-col overflow-auto">
+          <div className="max-h-[100dvh] h-screen w-full flex flex-col overflow-auto">
             <Nav />
             {children}
           </div>
