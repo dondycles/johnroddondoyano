@@ -127,7 +127,7 @@ export default function Footer() {
       </div>
       <div className="w-full text-xs text-muted-foreground flex items-center gap-4 flex-wrap-reverse">
         <p className="inline-flex items-center gap-1">
-          <FaRegCopyright /> John Rod Dondoyano 2024
+          <FaRegCopyright /> 2024 John Rod Dondoyano.
         </p>
         <p className="inline-flex items-center gap-1">
           <MdOutlineEmail />
@@ -138,7 +138,7 @@ export default function Footer() {
               target="_blank"
               className="underline"
             >
-              email
+              email.
             </Link>
           </span>
         </p>
