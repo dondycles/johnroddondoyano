@@ -62,10 +62,12 @@ export default function Nav() {
                 className="border-[1px] border-border rounded-full"
               />
             </Link>
-            <div className="flex flex-col gap-4 text-xl flex-1">
-              <Link href={"/piano"}>Music</Link>
-              <Link href={"/piano"}>Blogs</Link>
-              <Link href={"/piano"}>About</Link>
+            <div className="flex flex-col gap-4 text-xl flex-1 text-muted-foreground">
+              <Link href={"/blogs"}>Blogs</Link>
+              <Link href={"/biography"}>Biography</Link>
+              <Link href={"/music"}>Music</Link>
+              <Link href={"/web-development"}>Web Development</Link>
+              <Link href={"/logo-explanation"}>Logo Explanation</Link>
             </div>
             <div className="mx-auto">
               <Socials classNames="mx-auto text-2xl" />

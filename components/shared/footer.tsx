@@ -2,6 +2,7 @@ import Link from "next/link";
 import {
   FaApple,
   FaFacebook,
+  FaGithub,
   FaInstagram,
   FaRegCopyright,
   FaSpotify,
@@ -34,12 +35,20 @@ export default function Footer() {
             <FaFacebook />
             Facebook
           </Link>
+
           <Link
             href={"https://youtube.com/@johnrod"}
             target="_blank"
             className="flex items-center gap-1"
           >
             <FaYoutube /> YouTube
+          </Link>
+          <Link
+            href={"https://github.com/dondycles"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaGithub /> GitHub
           </Link>
           <Link
             href={"https://tiktok.com/dondycles"}

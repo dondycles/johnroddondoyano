@@ -14,8 +14,8 @@ export default function Socials({
   classNames?: React.HTMLAttributes<HTMLDivElement>["className"];
 }) {
   return (
-    <div className="flex flex-col gap-4">
-      <div className={cn("flex gap-4", classNames)}>
+    <div className="flex flex-col gap-4 w-full ">
+      <div className={cn("flex gap-4 justify-center", classNames)}>
         <Link href={"/"}>
           <FaSquareXTwitter />
         </Link>
