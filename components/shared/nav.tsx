@@ -18,12 +18,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import jrlogo from "@/public/jr-logo.svg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import JrLogo from "./jr-logo";
 export default function Nav() {
   return (
     <header className=" top-0 left-0 w-full nav-padding z-10 backdrop-blur-sm bg-background/80 sticky">
       <div className="flex items-center justify-between ">
         <Link href={"/"} className="font-medium text-2xl ">
-          <Image alt="JR" src={jrlogo} className="dark:invert h-8 w-8" />
+          <JrLogo className="h-8 w-8" />
         </Link>
         <nav className="hidden sm:flex flex-row gap-x-4 items-center ">
           <Button asChild variant={"ghost"}>

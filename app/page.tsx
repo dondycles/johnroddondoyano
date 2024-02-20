@@ -1,5 +1,17 @@
 import { PiPianoKeysFill } from "react-icons/pi";
-import { FaLaptopCode, FaSpotify, FaYoutube } from "react-icons/fa6";
+import {
+  FaApple,
+  FaCopyright,
+  FaFacebook,
+  FaInstagram,
+  FaKeyboard,
+  FaLaptopCode,
+  FaRegCopyright,
+  FaSpotify,
+  FaTiktok,
+  FaXTwitter,
+  FaYoutube,
+} from "react-icons/fa6";
 import Achivement from "@/components/cards/achivement";
 import Socials from "@/components/shared/socials";
 import { Badge } from "@/components/ui/badge";
@@ -10,7 +22,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import jrlogo from "@/public/jr-logo.svg";
 import jlogo from "@/public/j-logo.svg";
 import rlogo from "@/public/r-logo.svg";
 import note from "@/public/music-note.svg";
@@ -21,12 +32,17 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { MdEmail, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import {
+  MdEmail,
+  MdMusicNote,
+  MdOutlineEmail,
+  MdOutlineKeyboardArrowDown,
+  MdPiano,
+} from "react-icons/md";
 import Link from "next/link";
+import JrLogo from "@/components/shared/jr-logo";
 
 export default function Home() {
   const achievements = [
@@ -54,19 +70,11 @@ export default function Home() {
           <Dialog>
             <TooltipTrigger asChild className="w-fit mx-auto">
               <DialogTrigger>
-                <Image
-                  className="h-32 w-32 fill-foreground  dark:invert"
-                  alt="r"
-                  src={jrlogo}
-                />
+                <JrLogo className="h-32 w-32" />
               </DialogTrigger>
             </TooltipTrigger>
             <DialogContent>
-              <Image
-                className="h-24 w-24 fill-foreground mx-auto"
-                alt="J"
-                src={jrlogo}
-              />
+              <JrLogo className="h-24 w-24 mx-auto" />
               <hr className="bg-muted" />
               <Table>
                 <TableBody>
@@ -75,12 +83,12 @@ export default function Home() {
                       <div className="flex w-full justify-center gap-4">
                         <Image
                           className="h-16 w-fit fill-foreground  dark:invert"
-                          alt="JR"
+                          alt="j"
                           src={jlogo}
                         />
                         <Image
                           className="h-16 w-fit fill-foreground  dark:invert"
-                          alt="JR"
+                          alt="r"
                           src={rlogo}
                         />
                       </div>
@@ -177,33 +185,60 @@ export default function Home() {
         <div className="  text-left flex flex-col gap-1 text-muted-foreground">
           <p className="font-semibold text-foreground">Socials</p>
           <hr />
-          <Link href={"https://instagram.com/dondycles"} target="_blank">
-            Instagram
+          <Link
+            href={"https://instagram.com/dondycles"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaInstagram /> Instagram
           </Link>
-          <Link href={"https://facebook.com/dondycles"} target="_blank">
+          <Link
+            href={"https://facebook.com/dondycles"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaFacebook />
             Facebook
           </Link>
-          <Link href={"https://youtube.com/@johnrod"} target="_blank">
-            YouTube
+          <Link
+            href={"https://youtube.com/@johnrod"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaYoutube /> YouTube
           </Link>
-          <Link href={"https://tiktok.com/dondycles"} target="_blank">
+          <Link
+            href={"https://tiktok.com/dondycles"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaTiktok />
             TikTok
           </Link>
-          <Link href={"https://x.com/dondycles"} target="_blank">
-            X
+          <Link
+            href={"https://x.com/dondycles"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaXTwitter />X
           </Link>
         </div>
-        <div className="  text-left flex flex-col gap-1 text-muted-foreground">
+        <div className="text-left flex flex-col gap-1 text-muted-foreground">
           <p className="font-semibold text-foreground">Buy</p>
           <hr />
-          <Link href={"https://payhip.com/johnroddondoyano"} target="_blank">
-            Piano & Strings MIDIs
+          <Link
+            href={"https://payhip.com/johnroddondoyano"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <MdPiano /> Piano & Strings MIDIs
           </Link>
           <Link
             href={"https://mymusicsheet.com/johnroddondoyano"}
             target="_blank"
+            className="flex items-center gap-1"
           >
-            Piano Sheets
+            <MdMusicNote /> Piano Sheets
           </Link>
         </div>
         <div className="  text-left flex flex-col gap-1 text-muted-foreground">
@@ -214,7 +249,9 @@ export default function Home() {
               "https://open.spotify.com/artist/2opN2BRNgnBJIO932Kyr3U?si=3yH2nrluRqqFP1qOzM2TcA"
             }
             target="_blank"
+            className="flex items-center gap-1"
           >
+            <FaSpotify />
             Spotify
           </Link>
           <Link
@@ -222,20 +259,35 @@ export default function Home() {
               "https://music.apple.com/us/artist/john-rod-dondoyano/1716913960"
             }
             target="_blank"
+            className="flex items-center gap-1"
           >
+            <FaApple />
             Apple Music
           </Link>
-          <Link href={"https://youtube.com/@johnrod"} target="_blank">
+          <Link
+            href={"https://youtube.com/@johnrod"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaYoutube />
             YouTube
           </Link>
-          <Link href={"https://tiktok.com/dondycles"} target="_blank">
+          <Link
+            href={"https://tiktok.com/dondycles"}
+            target="_blank"
+            className="flex items-center gap-1"
+          >
+            <FaTiktok />
             TikTok
           </Link>
         </div>
       </div>
       <div className="w-full text-xs text-muted-foreground flex items-center gap-4 flex-wrap-reverse">
-        <p className="">John Rod Dondoyano 2024</p>
-        <p>
+        <p className="inline-flex items-center gap-1">
+          <FaRegCopyright /> John Rod Dondoyano 2024
+        </p>
+        <p className="inline-flex items-center gap-1">
+          <MdOutlineEmail />
           Inquries? Send it through my{" "}
           <span>
             <Link
