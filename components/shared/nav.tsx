@@ -44,7 +44,7 @@ export default function Nav() {
           <DropdownMenu>
             <Button asChild variant={"ghost"}>
               <DropdownMenuTrigger>
-                Career <MdOutlineKeyboardArrowDown className="ml-2" />
+                Portfolio <MdOutlineKeyboardArrowDown className="ml-2" />
               </DropdownMenuTrigger>
             </Button>
             <DropdownMenuContent>
@@ -52,9 +52,6 @@ export default function Nav() {
               <DropdownMenuItem> Web Development</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <Button asChild variant={"ghost"}>
-            <Link href={"/piano"}>About</Link>
-          </Button>
           <ThemeBtn />
         </nav>
 

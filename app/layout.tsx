@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} font-poppins antialiased leading-8 overflow-hidden `}
+        className={`${poppins.variable} font-poppins antialiased leading-8 overflow-hidden sm:text-base text-sm `}
       >
         <ThemeProvider
           attribute="class"
