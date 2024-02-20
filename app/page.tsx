@@ -75,8 +75,8 @@ export default function Home() {
                       </div>
                     </TableCell>
                     <TableCell>
-                      This logo consists my initals, "J" and small "r" for John
-                      Rod.
+                      This logo consists my initals, &quot;J&quot; and small
+                      &quot;r&quot; for John Rod.
                     </TableCell>
                   </TableRow>
                   <TableRow>
