@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
 
 export default function Biography() {
@@ -25,6 +26,7 @@ export default function Biography() {
           250+ piano covers.
         </p>
       </div>
+      <Footer />
     </main>
   );
 }
