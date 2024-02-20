@@ -17,22 +17,22 @@ export default function Socials({
   return (
     <div className="flex flex-col gap-4 w-full ">
       <div className={cn("flex gap-4 justify-center", classNames)}>
-        <Link href={"/"}>
+        <Link href={"https://x.com/dondycles"} target="_blank">
           <FaXTwitter />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://facebook.com/dondycles"}>
           <PiFacebookLogo />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://instagram.com/dondycles"} target="_blank">
           <PiInstagramLogo />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://youtube.com/@johnrod"} target="_blank">
           <PiYoutubeLogo />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://tiktok.com/dondycles"} target="_blank">
           <PiTiktokLogo />
         </Link>
-        <Link href={"/"}>
+        <Link href={"https://github.com/dondycles"} target="_blank">
           <PiGithubLogo />
         </Link>
       </div>
