@@ -1,12 +1,13 @@
 import { cn } from "@/lib/utils";
-import {
-  FaSquareFacebook,
-  FaSquareInstagram,
-  FaSquareXTwitter,
-  FaSquareYoutube,
-} from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
-import { ReactNode } from "react";
+import {
+  PiFacebookLogo,
+  PiGithubLogo,
+  PiInstagramLogo,
+  PiTiktokLogo,
+  PiYoutubeLogo,
+} from "react-icons/pi";
 
 export default function Socials({
   classNames,
@@ -17,16 +18,22 @@ export default function Socials({
     <div className="flex flex-col gap-4 w-full ">
       <div className={cn("flex gap-4 justify-center", classNames)}>
         <Link href={"/"}>
-          <FaSquareXTwitter />
+          <FaXTwitter />
         </Link>
         <Link href={"/"}>
-          <FaSquareFacebook />
+          <PiFacebookLogo />
         </Link>
         <Link href={"/"}>
-          <FaSquareInstagram />
+          <PiInstagramLogo />
         </Link>
         <Link href={"/"}>
-          <FaSquareYoutube />
+          <PiYoutubeLogo />
+        </Link>
+        <Link href={"/"}>
+          <PiTiktokLogo />
+        </Link>
+        <Link href={"/"}>
+          <PiGithubLogo />
         </Link>
       </div>
       <p className="text-xs text-muted-foreground mx-auto">
