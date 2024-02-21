@@ -55,90 +55,60 @@ export default function Music() {
           );
         })}
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Most Popular Video</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Suspense
-            fallback={
-              <p className="text-muted-foreground text-xs text-center">
-                Loading
-              </p>
-            }
-          >
-            <Embed
-              className="aspect-video"
-              url="https://www.youtube.com/embed/_TNwN92mw6E?si=fxIaxQ3lFx5fzQJZ"
-            />
-          </Suspense>
-        </CardContent>
-        <CardFooter>
-          <Link
-            className="mx-auto text-muted-foreground"
-            href={"https://youtube.com/@johnrod"}
-            target="_blank"
-          >
-            Visit YouTube
-          </Link>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Spotify</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Suspense
-            fallback={
-              <p className="text-muted-foreground text-xs text-center">
-                Loading
-              </p>
-            }
-          >
-            <Embed
-              className="h-[400px]"
-              url="https://open.spotify.com/embed/artist/2opN2BRNgnBJIO932Kyr3U?utm_source=generator&theme=0"
-            />
-          </Suspense>
-        </CardContent>
-        <CardFooter>
-          <Link
-            className="mx-auto text-muted-foreground"
-            href={"https://open.spotify.com/artist/2opN2BRNgnBJIO932Kyr3U"}
-            target="_blank"
-          >
-            Visit Spotify
-          </Link>
-        </CardFooter>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Piano Sheets</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Suspense
-            fallback={
-              <p className="text-muted-foreground text-xs text-center">
-                Loading
-              </p>
-            }
-          >
-            <Embed
-              className="aspect-square"
-              url="https://www.mymusicsheet.com/johnroddondoyano?viewType=sheet&orderBy=createdAt&page=1"
-            />
-          </Suspense>
-        </CardContent>
-        <CardFooter>
-          <Link
-            className="mx-auto text-muted-foreground"
-            href={"https://mymusicsheet.com/johnroddondoyano"}
-            target="_blank"
-          >
-            Visit Website
-          </Link>
-        </CardFooter>
-      </Card>
+      <Suspense
+        fallback={
+          <p className="text-muted-foreground text-xs text-center">Loading</p>
+        }
+      >
+        <Embed
+          className="aspect-video"
+          url="https://www.youtube.com/embed/_TNwN92mw6E?si=fxIaxQ3lFx5fzQJZ"
+        />
+      </Suspense>
+      <Link
+        className="mx-auto text-muted-foreground"
+        href={"https://youtube.com/@johnrod"}
+        target="_blank"
+      >
+        Visit YouTube
+      </Link>
+      <hr />
+      <Suspense
+        fallback={
+          <p className="text-muted-foreground text-xs text-center">Loading</p>
+        }
+      >
+        <Embed
+          className="h-[400px]"
+          url="https://open.spotify.com/embed/artist/2opN2BRNgnBJIO932Kyr3U?utm_source=generator&theme=0"
+        />
+      </Suspense>
+      <Link
+        className="mx-auto text-muted-foreground"
+        href={"https://open.spotify.com/artist/2opN2BRNgnBJIO932Kyr3U"}
+        target="_blank"
+      >
+        Visit Spotify
+      </Link>
+      <hr />
+
+      <Suspense
+        fallback={
+          <p className="text-muted-foreground text-xs text-center">Loading</p>
+        }
+      >
+        <Embed
+          className="aspect-square"
+          url="https://www.mymusicsheet.com/johnroddondoyano?viewType=sheet&orderBy=createdAt&page=1"
+        />
+      </Suspense>
+      <Link
+        className="mx-auto text-muted-foreground"
+        href={"https://mymusicsheet.com/johnroddondoyano"}
+        target="_blank"
+      >
+        Visit Website
+      </Link>
 
       <Footer />
     </main>
