@@ -69,7 +69,7 @@ export default function Home() {
         <DropdownMenu>
           <Button asChild>
             <DropdownMenuTrigger>
-              Portfolio
+              Creations
               <MdOutlineKeyboardArrowDown className="ml-2" />
             </DropdownMenuTrigger>
           </Button>
