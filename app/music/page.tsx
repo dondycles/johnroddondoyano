@@ -96,7 +96,7 @@ export default function Music() {
             }
           >
             <Embed
-              className="aspect-square"
+              className="h-[400px]"
               url="https://open.spotify.com/embed/artist/2opN2BRNgnBJIO932Kyr3U?utm_source=generator&theme=0"
             />
           </Suspense>

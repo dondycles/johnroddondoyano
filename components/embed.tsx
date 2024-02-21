@@ -13,7 +13,7 @@ export default async function Embed({
     <iframe
       src={url}
       allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
-      className={cn("max-w-[800px] mx-auto w-full", className)}
+      className={cn("rounded-[1rem] max-w-[800px] mx-auto w-full", className)}
       loading="lazy"
     />
   );
