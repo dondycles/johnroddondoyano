@@ -73,7 +73,7 @@ export default function Nav() {
               <Link href={"/logo"}>Logo Explanation</Link>
             </div>
             <div className="mx-auto">
-              <Socials classNames="mx-auto text-2xl" />
+              <Socials classNames="mx-auto text-lg" />
             </div>
           </SheetContent>
         </Sheet>
