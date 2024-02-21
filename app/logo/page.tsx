@@ -1,8 +1,3 @@
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
-import Image from "next/image";
-import jlogo from "@/public/j-logo.svg";
-import rlogo from "@/public/r-logo.svg";
-import note from "@/public/music-note.svg";
 import JrLogo from "@/components/shared/jr-logo";
 import LogoExplanationTable from "@/components/logo-explanation-table";
 import Footer from "@/components/shared/footer";

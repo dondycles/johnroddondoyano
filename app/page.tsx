@@ -1,19 +1,3 @@
-import { PiPianoKeysFill } from "react-icons/pi";
-import {
-  FaApple,
-  FaCopyright,
-  FaFacebook,
-  FaInstagram,
-  FaKeyboard,
-  FaLaptopCode,
-  FaRegCopyright,
-  FaSpotify,
-  FaTiktok,
-  FaXTwitter,
-  FaYoutube,
-} from "react-icons/fa6";
-import Achivement from "@/components/cards/achivement";
-import Socials from "@/components/shared/socials";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import {
@@ -22,11 +6,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import jlogo from "@/public/j-logo.svg";
-import rlogo from "@/public/r-logo.svg";
-import note from "@/public/music-note.svg";
-import Image from "next/image";
-import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -34,13 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  MdEmail,
-  MdMusicNote,
-  MdOutlineEmail,
-  MdOutlineKeyboardArrowDown,
-  MdPiano,
-} from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Link from "next/link";
 import JrLogo from "@/components/shared/jr-logo";
 import Footer from "@/components/shared/footer";
