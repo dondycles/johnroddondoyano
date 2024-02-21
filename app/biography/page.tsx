@@ -113,44 +113,39 @@ export default function Biography() {
         </p>
         <p className="text-muted-foreground">Camera: Samsung Galaxy S23.</p>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Gallery</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <Carousel className=" mx-auto max-w-[600px] w-full aspect-square">
-            <CarouselContent>
-              <CarouselItem className="relative w-full aspect-square">
-                <Image
-                  fill
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  src={img1}
-                  alt="John Rod"
-                />
-              </CarouselItem>
-              <CarouselItem className="relative w-full aspect-square">
-                <Image
-                  fill
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  src={img2}
-                  alt="John Rod"
-                />
-              </CarouselItem>
-              <CarouselItem className="relative w-full aspect-square">
-                <Image
-                  fill
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  src={img3}
-                  alt="John Rod"
-                />
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </CardContent>
-      </Card>
-
+      <Carousel className=" mx-auto max-w-[600px] w-full aspect-square ">
+        <CarouselContent>
+          <CarouselItem className="relative w-full aspect-square">
+            <Image
+              fill
+              sizes="(max-width: 768px) 100vw, 700px"
+              src={img1}
+              alt="John Rod"
+              className="rounded-[0.5rem]"
+            />
+          </CarouselItem>
+          <CarouselItem className="relative w-full aspect-square">
+            <Image
+              fill
+              sizes="(max-width: 768px) 100vw, 700px"
+              src={img2}
+              alt="John Rod"
+              className="rounded-[0.5rem]"
+            />
+          </CarouselItem>
+          <CarouselItem className="relative w-full aspect-square">
+            <Image
+              fill
+              sizes="(max-width: 768px) 100vw, 700px"
+              src={img3}
+              alt="John Rod"
+              className="rounded-[0.5rem]"
+            />
+          </CarouselItem>
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
       <Footer />
     </main>
   );
