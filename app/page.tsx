@@ -45,6 +45,7 @@ import Link from "next/link";
 import JrLogo from "@/components/shared/jr-logo";
 import Footer from "@/components/shared/footer";
 import { Metadata } from "next";
+import LogoExplanationTable from "@/components/logo-explanation-table";
 
 export const metadata: Metadata = {
   title: "John Rod Dondoyano",
@@ -60,64 +61,13 @@ export default function Home() {
           <Dialog>
             <TooltipTrigger asChild className="w-fit mx-auto">
               <DialogTrigger>
-                <JrLogo className="h-32 w-32" />
+                <JrLogo className="size-32" />
               </DialogTrigger>
             </TooltipTrigger>
             <DialogContent>
-              <JrLogo className="h-24 w-24 mx-auto" />
+              <JrLogo className="size-24 mx-auto" />
               <hr className="bg-muted" />
-              <Table>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>
-                      <div className="flex w-full justify-center gap-4">
-                        <Image
-                          className="h-16 w-fit fill-foreground  dark:invert"
-                          alt="j"
-                          src={jlogo}
-                        />
-                        <Image
-                          className="h-16 w-fit fill-foreground  dark:invert"
-                          alt="r"
-                          src={rlogo}
-                        />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      This logo consists my initals, &quot;J&quot; and small
-                      &quot;r&quot; for John Rod.
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <div className="flex w-fit gap-4 mx-auto">
-                        <div className="bg-foreground/50 h-24 w-[1px] ml-2"></div>
-                        <div className="bg-foreground h-16 w-4 -mr-6"></div>
-                        <div className="bg-foreground/50 h-24 w-[1px]"></div>
-                        <div className="bg-foreground h-16 w-4 -mr-6"></div>
-                        <div className="bg-foreground/50 h-24 w-[1px]"></div>
-                        <div className="bg-foreground/50 h-24 w-[1px] ml-2"></div>
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      The body of each figure, or letter, resembles black piano
-                      keys.
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Image
-                        className="h-24 w-24 fill-foreground mx-auto  dark:invert"
-                        alt="note"
-                        src={note}
-                      />
-                    </TableCell>
-                    <TableCell>
-                      The curves and sharpness resembles musical notes.
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+              <LogoExplanationTable />
             </DialogContent>
           </Dialog>
           <TooltipContent>
