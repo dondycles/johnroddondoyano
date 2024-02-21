@@ -30,11 +30,10 @@ export default function Nav() {
           <Button asChild variant={"ghost"}>
             <Link href={"/blogs"}>Blogs</Link>
           </Button>
-
           <DropdownMenu>
             <Button asChild variant={"ghost"}>
               <DropdownMenuTrigger>
-                Portfolio <MdOutlineKeyboardArrowDown className="ml-2" />
+                Creations <MdOutlineKeyboardArrowDown className="ml-2" />
               </DropdownMenuTrigger>
             </Button>
             <DropdownMenuContent>

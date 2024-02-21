@@ -23,7 +23,7 @@ export function ThemeBtn({
   return (
     <Button
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      variant="outline"
+      variant="ghost"
       size="icon"
       className={cn("text-2xl", classNames)}
     >

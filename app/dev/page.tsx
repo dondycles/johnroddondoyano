@@ -29,6 +29,12 @@ import React from "react";
 import { Download, ExternalLink } from "lucide-react";
 import Footer from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
+
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Web Development | John Rod Dondoyano",
+};
+
 export default function Home() {
   const skills = [
     { skill: "HTML", icons: <TbBrandHtml5 /> },
@@ -142,6 +148,10 @@ export default function Home() {
       <h1 className="leading-none mx-auto">
         <Badge>Web Development</Badge>
       </h1>
+      <p className="max-w-[800px] w-full text-center mx-auto">
+        I have this hobby of creating sleek websites and I aspire to be a
+        professional in this field.
+      </p>
       <Card>
         <CardHeader className="flex-row items-center gap-4">
           <Avatar className="w-24 h-24">
@@ -158,8 +168,7 @@ export default function Home() {
           <p className="indent-4">
             I am a self-taught web developer who pulls up an all-nighter, holds
             a bachelor&apos;s degree in computer engineering. I split my time
-            between music and exploring the world of web development. In fact, I
-            achieved millions of views with my piano covers on YouTube.
+            between music and exploring the world of web development.
           </p>
           <br />
           <p className="indent-4">

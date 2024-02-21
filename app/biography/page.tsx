@@ -1,6 +1,9 @@
 import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: " Biography | John Rod Dondoyano",
+};
 export default function Biography() {
   return (
     <main className="w-full flex-1 text-center global-padding flex flex-col global-gap">

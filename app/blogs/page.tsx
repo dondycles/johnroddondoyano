@@ -2,7 +2,10 @@ import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: " Blogs | John Rod Dondoyano",
+};
 export default function Blogs() {
   return (
     <main className="w-full flex-1 text-center global-padding flex flex-col global-gap">

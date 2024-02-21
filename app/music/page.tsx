@@ -2,18 +2,17 @@ import Achivement from "@/components/cards/achivement";
 import Embed from "@/components/embed";
 import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Metadata } from "next";
 import Link from "next/link";
-
 import { Suspense } from "react";
-import { FaLaptopCode, FaSpotify, FaYoutube } from "react-icons/fa6";
+import { FaSpotify, FaYoutube } from "react-icons/fa6";
 import { PiPianoKeysFill } from "react-icons/pi";
+
+export const metadata: Metadata = {
+  title: "Music | John Rod Dondoyano",
+  description:
+    "Piano covers that are playable by beginners up to intermediate piano players.",
+};
 
 export default function Music() {
   const achievements = [
@@ -40,9 +39,9 @@ export default function Music() {
       <h1 className="leading-none">
         <Badge>Music</Badge>
       </h1>
-      <p>
-        Piano covers that are playable by beginners up to intermediate piano
-        players.
+      <p className="max-w-[800px] w-full text-center mx-auto">
+        I create piano covers that are playable by beginners up to intermediate
+        piano players.
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-3  gap-4 sm:gap-8">
         {achievements.map((ach, idx) => {
