@@ -2,6 +2,18 @@ import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import img1 from "@/public/gallery/1.webp";
+import img2 from "@/public/gallery/2.webp";
+import img3 from "@/public/gallery/3.webp";
+import Image from "next/image";
 export const metadata: Metadata = {
   title: " Biography | John Rod Dondoyano",
 };
@@ -11,7 +23,7 @@ export default function Biography() {
       <h1 className="leading-none">
         <Badge className="w-fit mx-auto">Biography</Badge>
       </h1>
-      <div className="global-y-space max-w-[800px] mx-auto text-left">
+      <div className="global-y-space mx-auto text-left">
         <p className="indent-8">
           The piano journey began when he started learning to play the piano at
           the tender age of 10. Under the guidance of a skilled teacher , he
@@ -101,6 +113,44 @@ export default function Biography() {
         </p>
         <p className="text-muted-foreground">Camera: Samsung Galaxy S23.</p>
       </div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Gallery</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Carousel className=" mx-auto max-w-[600px] w-full aspect-square">
+            <CarouselContent>
+              <CarouselItem className="relative w-full aspect-square">
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src={img1}
+                  alt="John Rod"
+                />
+              </CarouselItem>
+              <CarouselItem className="relative w-full aspect-square">
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src={img2}
+                  alt="John Rod"
+                />
+              </CarouselItem>
+              <CarouselItem className="relative w-full aspect-square">
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src={img3}
+                  alt="John Rod"
+                />
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </CardContent>
+      </Card>
+
       <Footer />
     </main>
   );

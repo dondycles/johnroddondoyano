@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   TbBrandHtml5,
   TbBrandJavascript,
@@ -31,6 +30,7 @@ import Footer from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 
 import { Metadata } from "next";
+import Image from "next/image";
 export const metadata: Metadata = {
   title: "Web Development | John Rod Dondoyano",
 };
@@ -154,10 +154,14 @@ export default function Home() {
       </p>
       <Card>
         <CardHeader className="flex-col xs:flex-row items-center gap-4">
-          <Avatar className="w-24 h-24">
-            <AvatarImage src="/avatar1.jpg" />
-            <AvatarFallback>JR</AvatarFallback>
-          </Avatar>
+          <Image
+            className="rounded-full"
+            alt="John Rod"
+            height={128}
+            width={128}
+            quality={100}
+            src="/avatar1.jpg"
+          />
           <div className="mx-auto xs:mx-0">
             <CardTitle>John Rod Dondoyano</CardTitle>
             <CardDescription>Front-End Web Developer</CardDescription>
@@ -218,10 +222,13 @@ export default function Home() {
               <React.Fragment key={exp.job}>
                 <div className="space-y-4">
                   <div className="flex flex-row gap-4 items-start">
-                    <Avatar className="w-16 h-16">
-                      <AvatarImage src={exp.img} />
-                      <AvatarFallback>{exp.company}</AvatarFallback>
-                    </Avatar>
+                    <Image
+                      className="rounded-full"
+                      alt={exp.job}
+                      src={exp.img}
+                      width={64}
+                      height={64}
+                    />
                     <div>
                       <p className="font-semibold text-lg">{exp.job}</p>
                       <p className="">{exp.company}</p>
@@ -279,10 +286,13 @@ export default function Home() {
               <React.Fragment key={project.name}>
                 <div className="space-y-4">
                   <div className="flex flex-row gap-4">
-                    <Avatar className="w-16 h-16 bg-black">
-                      <AvatarImage src={project.img} />
-                      <AvatarFallback>{project.name}</AvatarFallback>
-                    </Avatar>
+                    <Image
+                      className="rounded-full"
+                      alt={project.name}
+                      src={project.img}
+                      width={64}
+                      height={64}
+                    />
                     <div className="flex gap-2 items-center">
                       <Link
                         href={project.link}
