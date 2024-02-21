@@ -153,12 +153,12 @@ export default function Home() {
         professional in this field.
       </p>
       <Card>
-        <CardHeader className="flex-row items-center gap-4">
+        <CardHeader className="flex-col xs:flex-row items-center gap-4">
           <Avatar className="w-24 h-24">
             <AvatarImage src="/avatar1.jpg" />
             <AvatarFallback>JR</AvatarFallback>
           </Avatar>
-          <div>
+          <div className="mx-auto xs:mx-0">
             <CardTitle>John Rod Dondoyano</CardTitle>
             <CardDescription>Front-End Web Developer</CardDescription>
             <CardDescription>johnroddondoyano8@gmail.com</CardDescription>

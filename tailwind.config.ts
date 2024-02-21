@@ -76,7 +76,7 @@ const config = {
         poppins: ["var(--font-poppins)"],
       },
       screens: {
-        xs: "420px",
+        xs: "436px",
       },
     },
   },
