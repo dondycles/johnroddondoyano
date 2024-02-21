@@ -31,29 +31,29 @@ import Footer from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 export default function Home() {
   const skills = [
-    { skill: "HTML", icons: [<TbBrandHtml5 />] },
-    { skill: "CSS", icons: [<TbBrandCss3 />] },
-    { skill: "TailwindCSS", icons: [<TbBrandTailwind />] },
+    { skill: "HTML", icons: <TbBrandHtml5 /> },
+    { skill: "CSS", icons: <TbBrandCss3 /> },
+    { skill: "TailwindCSS", icons: <TbBrandTailwind /> },
     {
       skill: "JavaScript",
-      icons: [<TbBrandJavascript />],
+      icons: <TbBrandJavascript />,
     },
     {
       skill: "TypeScript",
-      icons: [<TbBrandTypescript />],
+      icons: <TbBrandTypescript />,
     },
     {
       skill: "NextJS",
-      icons: [<TbBrandNextjs />],
+      icons: <TbBrandNextjs />,
     },
     {
       skill: "ReactJS",
-      icons: [<TbBrandReact />],
+      icons: <TbBrandReact />,
     },
-    { skill: "SvelteKit", icons: [<TbBrandSvelte />] },
-    { skill: "WordPress", icons: [<TbBrandWordpress />] },
-    { skill: "Supabase", icons: [<TbBrandSupabase />] },
-    { skill: "Firebase", icons: [<TbBrandFirebase />] },
+    { skill: "SvelteKit", icons: <TbBrandSvelte /> },
+    { skill: "WordPress", icons: <TbBrandWordpress /> },
+    { skill: "Supabase", icons: <TbBrandSupabase /> },
+    { skill: "Firebase", icons: <TbBrandFirebase /> },
   ];
   const experiences = [
     {
