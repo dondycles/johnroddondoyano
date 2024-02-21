@@ -31,32 +31,21 @@ import Footer from "@/components/shared/footer";
 import { Button } from "@/components/ui/button";
 export default function Home() {
   const skills = [
-    { skill: "HTML", icons: [<TbBrandHtml5 />] },
-    { skill: "CSS", icons: [<TbBrandCss3 />] },
-    { skill: "TailwindCSS", icons: [<TbBrandTailwind />] },
-    {
-      skill: "JavaScript",
-      icons: [<TbBrandJavascript />],
-    },
-    {
-      skill: "TypeScript",
-      icons: [<TbBrandTypescript />],
-    },
-    {
-      skill: "NextJS",
-      icons: [<TbBrandNextjs />],
-    },
-    {
-      skill: "ReactJS",
-      icons: [<TbBrandReact />],
-    },
-    { skill: "SvelteKit", icons: [<TbBrandSvelte />] },
-    { skill: "WordPress", icons: [<TbBrandWordpress />] },
-    { skill: "Supabase", icons: [<TbBrandSupabase />] },
-    { skill: "Firebase", icons: [<TbBrandFirebase />] },
+    { key: "skills0", skill: "HTML", icons: [<TbBrandHtml5 />] },
+    { key: "skills1", skill: "CSS", icons: [<TbBrandCss3 />] },
+    { key: "skills2", skill: "TailwindCSS", icons: [<TbBrandTailwind />] },
+    { key: "skills3", skill: "JavaScript", icons: [<TbBrandJavascript />] },
+    { key: "skills4", skill: "TypeScript", icons: [<TbBrandTypescript />] },
+    { key: "skills5", skill: "NextJS", icons: [<TbBrandNextjs />] },
+    { key: "skills6", skill: "ReactJS", icons: [<TbBrandReact />] },
+    { key: "skills7", skill: "SvelteKit", icons: [<TbBrandSvelte />] },
+    { key: "skills8", skill: "WordPress", icons: [<TbBrandWordpress />] },
+    { key: "skills9", skill: "Supabase", icons: [<TbBrandSupabase />] },
+    { key: "skills10", skill: "Firebase", icons: [<TbBrandFirebase />] },
   ];
   const experiences = [
     {
+      key: "exp0",
       date: "Jul 2023 - Nov 2023",
       company: "HeroeZ!",
       job: "Front-End Web Dev.",
@@ -72,6 +61,7 @@ export default function Home() {
       ],
     },
     {
+      key: "exp1",
       date: "Feb 2023 - May 2023",
       company: "MGHS Solution And Advertising Services",
       job: "Junior Web Dev. (Internship)",
@@ -86,6 +76,7 @@ export default function Home() {
       ],
     },
     {
+      key: "exp2",
       date: "Jul 2022 - Dec 2022",
       company: "Studio CXGNUS",
       job: "Front-End Web Dev.",
@@ -106,6 +97,7 @@ export default function Home() {
   ];
   const otherprojects = [
     {
+      key: "op0",
       name: "Expen//Save",
       desc: "A web app for tracking expenses and savings at the same with analytics and history.",
       link: "https://expensave-shadcn.vercel.app",
@@ -121,6 +113,7 @@ export default function Home() {
     },
 
     {
+      key: "op1",
       name: "Wheel Of Pearl",
       desc: "Web application you can use to help you decide in life.",
       link: "https://wheel-of-pearl.vercel.app/",
@@ -129,6 +122,7 @@ export default function Home() {
       gh: "https://github.com/dondycles/wheel-of-pearl",
     },
     {
+      key: "op2",
       name: "Tapxiety",
       desc: "A simple web game to ease your anxiety.",
       link: "https://tapxiety.vercel.app/",
