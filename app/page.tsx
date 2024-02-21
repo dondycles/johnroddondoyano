@@ -44,6 +44,13 @@ import {
 import Link from "next/link";
 import JrLogo from "@/components/shared/jr-logo";
 import Footer from "@/components/shared/footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "John Rod Dondoyano",
+  description:
+    "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
+};
 
 export default function Home() {
   const achievements = [
@@ -174,10 +181,13 @@ export default function Home() {
               <MdOutlineKeyboardArrowDown className="ml-2" />
             </DropdownMenuTrigger>
           </Button>
-
           <DropdownMenuContent>
-            <DropdownMenuItem>Music</DropdownMenuItem>
-            <DropdownMenuItem>Web Development</DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href={"/music"}>Music</Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href={"/dev"}>Web Development</Link>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         <Button variant={"outline"} asChild>
