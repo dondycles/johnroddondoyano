@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "John Rod Dondoyano",
   description:
     "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
-  metadataBase: new URL("https://johnroddondoyano.vercel.app/"),
+  metadataBase: new URL("https://johnroddondoyano.com/"),
   themeColor: "#0a0a0a",
   twitter: {
     title: "John Rod Dondoyano",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
     type: "website",
     siteName: "John Rod Dondoyano",
-    url: "https://johnroddondoyano.vercel.app/",
+    url: "https://johnroddondoyano.com/",
     images: [
       {
         url: "/summary.png",
