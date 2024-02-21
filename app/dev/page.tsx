@@ -157,8 +157,8 @@ export default function Home() {
         <CardContent>
           <p className="indent-4">
             I am a self-taught web developer who pulls up an all-nighter, holds
-            a bachelor's degree in computer engineering. I split my time between
-            music and exploring the world of web development. In fact, I
+            a bachelor&apos;s degree in computer engineering. I split my time
+            between music and exploring the world of web development. In fact, I
             achieved millions of views with my piano covers on YouTube.
           </p>
           <br />
