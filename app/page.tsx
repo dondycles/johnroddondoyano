@@ -53,24 +53,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const achievements = [
-    {
-      icon: <FaYoutube />,
-      descriptions: ["200k+ Subscribers", "55m+ views", "250+ Piano Covers"],
-    },
-    {
-      icon: <PiPianoKeysFill />,
-      descriptions: ["150+ Piano Sheets", "8.2k+ Sales Volume"],
-    },
-    {
-      icon: <FaSpotify />,
-      descriptions: ["10k+ Listeners", "70k+ Yearly Streams"],
-    },
-    {
-      icon: <FaLaptopCode />,
-      descriptions: ["2 Projects"],
-    },
-  ];
   return (
     <main className="w-full flex-1 text-center global-padding flex flex-col global-gap">
       <TooltipProvider delayDuration={100}>
@@ -160,19 +142,6 @@ export default function Home() {
         in both domains.
       </h2>
 
-      {/* <div className="w-full rounded-[0.5rem] mt-8 space-y-8 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2  gap-4 sm:gap-8">
-          {achievements.map((ach, idx) => {
-            return (
-              <Achivement
-                key={`${idx}`}
-                icon={ach.icon}
-                descriptions={ach.descriptions}
-              />
-            );
-          })}
-        </div>
-      </div> */}
       <div className="space-x-4 sm:space-x-8">
         <DropdownMenu>
           <Button asChild>

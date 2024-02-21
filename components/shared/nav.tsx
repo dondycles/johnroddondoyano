@@ -28,7 +28,7 @@ export default function Nav() {
         </Link>
         <nav className="hidden sm:flex flex-row gap-x-4 items-center ">
           <Button asChild variant={"ghost"}>
-            <Link href={"/piano"}>Blogs</Link>
+            <Link href={"/blogs"}>Blogs</Link>
           </Button>
 
           <DropdownMenu>
@@ -38,10 +38,17 @@ export default function Nav() {
               </DropdownMenuTrigger>
             </Button>
             <DropdownMenuContent>
-              <DropdownMenuItem>Music</DropdownMenuItem>
-              <DropdownMenuItem> Web Development</DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href={"/music"}>Music</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href={"/dev"}>Web Development</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+          <Button asChild variant={"ghost"}>
+            <Link href={"/biography"}>Biography</Link>
+          </Button>
           <ThemeBtn />
         </nav>
 
@@ -66,7 +73,7 @@ export default function Nav() {
               <Link href={"/blogs"}>Blogs</Link>
               <Link href={"/biography"}>Biography</Link>
               <Link href={"/music"}>Music</Link>
-              <Link href={"/web-development"}>Web Development</Link>
+              <Link href={"/dev"}>Web Development</Link>
               <Link href={"/logo-explanation"}>Logo Explanation</Link>
             </div>
             <div className="mx-auto">

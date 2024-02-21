@@ -139,48 +139,49 @@ export default function Home() {
   ];
   return (
     <main className="w-full flex-1  global-padding flex flex-col global-gap">
-      <header>
-        <Card>
-          <CardHeader className="flex-row items-center gap-4">
-            <Avatar className="w-24 h-24">
-              <AvatarImage src="/avatar1.jpg" />
-              <AvatarFallback>JR</AvatarFallback>
-            </Avatar>
-            <div>
-              <CardTitle>John Rod Dondoyano</CardTitle>
-              <CardDescription>Front-End Web Developer</CardDescription>
-              <CardDescription>johnroddondoyano8@gmail.com</CardDescription>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <p className="indent-4">
-              I am a self-taught web developer who pulls up an all-nighter,
-              holds a bachelor's degree in computer engineering. I split my time
-              between music and exploring the world of web development. In fact,
-              I achieved millions of views with my piano covers on YouTube.
-            </p>
-            <br />
-            <p className="indent-4">
-              I really enjoy developing and designing websites! Learning web
-              development is hard at first but later on I managed to enhance my
-              knowledge about HTML, CSS, and JavaScript from YouTube tutorials
-              and online lessons.
-            </p>
-          </CardContent>
-          <CardFooter className="justify-center gap-2">
-            <Button asChild variant={"default"}>
-              <Link
-                href="/john-rod-dondoyano-resume.pdf"
-                target="_blank"
-                download
-              >
-                Resume
-                <Download className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-          </CardFooter>
-        </Card>
-      </header>
+      <h1 className="leading-none mx-auto">
+        <Badge>Web Development</Badge>
+      </h1>
+      <Card>
+        <CardHeader className="flex-row items-center gap-4">
+          <Avatar className="w-24 h-24">
+            <AvatarImage src="/avatar1.jpg" />
+            <AvatarFallback>JR</AvatarFallback>
+          </Avatar>
+          <div>
+            <CardTitle>John Rod Dondoyano</CardTitle>
+            <CardDescription>Front-End Web Developer</CardDescription>
+            <CardDescription>johnroddondoyano8@gmail.com</CardDescription>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <p className="indent-4">
+            I am a self-taught web developer who pulls up an all-nighter, holds
+            a bachelor's degree in computer engineering. I split my time between
+            music and exploring the world of web development. In fact, I
+            achieved millions of views with my piano covers on YouTube.
+          </p>
+          <br />
+          <p className="indent-4">
+            I really enjoy developing and designing websites! Learning web
+            development is hard at first but later on I managed to enhance my
+            knowledge about HTML, CSS, and JavaScript from YouTube tutorials and
+            online lessons.
+          </p>
+        </CardContent>
+        <CardFooter className="justify-center gap-2">
+          <Button asChild variant={"default"}>
+            <Link
+              href="/john-rod-dondoyano-resume.pdf"
+              target="_blank"
+              download
+            >
+              Resume
+              <Download className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+        </CardFooter>
+      </Card>
       {/* skills */}
       <Card>
         <CardHeader>
