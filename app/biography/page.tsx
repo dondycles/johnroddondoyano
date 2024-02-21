@@ -1,6 +1,7 @@
 import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
+import Link from "next/link";
 export const metadata: Metadata = {
   title: " Biography | John Rod Dondoyano",
 };
@@ -18,26 +19,87 @@ export default function Biography() {
           with the fundamental knowledge of reading notes, playing chords,
           understanding dynamics, timing, and more. He quickly progressed and
           was able to play his favorite pop songs by watching YouTube tutorials
-          and applying the techniques he had learned.
+          and applying the techniques he had learned. He follows{" "}
+          <Link
+            href="https://youtube.com/rousseaumusique"
+            target="_blank"
+            className="text-slate-400"
+          >
+            Rousseau
+          </Link>
+          .
         </p>
         <p className="indent-8">
           His piano arrangements are known for being simple and easy to play yet
           enchanting, especially made for the beginners up to intermidiate
           level. His piano covers are accompanied with strings, which are also
           arranged by him, to add an orchestral touch to satisfy the listeners.
-          Gathered a total of 40+ Million views on his YouTube channel with over
-          250+ piano covers.
+          Gathered a total of 40+ Million views on his{" "}
+          <Link
+            href="https://youtube.com/@johnrod"
+            target="_blank"
+            className="text-red-500"
+          >
+            YouTube channel
+          </Link>{" "}
+          with over 250+ piano covers and over 8k+ volume sales of piano sheets
+          on{" "}
+          <Link
+            href="https://mymusicsheet.com/johnroddondoyano"
+            target="_blank"
+            className="text-blue-500"
+          >
+            MyMusicSheet
+          </Link>
+          .
         </p>
         <p className="indent-8">
           The success he achieved from just playing a piano turned his dreams
           into reality.
         </p>
-        <p>Influences: Claude Debussy, Zedd, and Taylor Swift.</p>
-        <p>Instruments: Piano - Roland RP102</p>
-        <p>
+        <p className="indent-8">
+          Another hobby he have is creating websites. He learned basic web
+          development through YouTube as well. He follows{" "}
+          <Link
+            className="text-blue-500"
+            href="https://youtube.com/webdevsimplified"
+            target="_blank"
+          >
+            Web Dev Simplified
+          </Link>{" "}
+          and{" "}
+          <Link
+            className="text-teal-500"
+            href="https://youtube.com/developedbyed"
+            target="_blank"
+          >
+            developedbyed
+          </Link>
+          . Years later, he started participating in a Web3 project called{" "}
+          <Link
+            className="text-red-500"
+            href="https://studiocxgnus-react.vercel.app/"
+            target="_blank"
+          >
+            {" "}
+            CXGNUS
+          </Link>{" "}
+          which gave him his first successfull achievement in this field.
+        </p>
+        <p className="indent-8">
+          He aspires to be a professional in this field one day.
+        </p>
+        <hr />
+        <p className="text-muted-foreground">
+          Influences: Claude Debussy, Zedd, and Taylor Swift.
+        </p>
+        <p className="text-muted-foreground">
+          Instruments: Piano - Roland RP102
+        </p>
+        <p className="text-muted-foreground">
           Softwares: FL Studio 21, Audacity, MuseScore, and DaVinci Resolve.
         </p>
-        <p>Camera: Samsung Galaxy S23.</p>
+        <p className="text-muted-foreground">Camera: Samsung Galaxy S23.</p>
       </div>
       <Footer />
     </main>
