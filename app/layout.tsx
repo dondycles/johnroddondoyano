@@ -15,6 +15,39 @@ export const metadata: Metadata = {
   title: "John Rod Dondoyano",
   description:
     "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
+  metadataBase: new URL("https://johnroddondoyano.vercel.app/"),
+  themeColor: "#0a0a0a",
+  twitter: {
+    title: "John Rod Dondoyano",
+    description:
+      "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
+    card: "summary_large_image",
+    creator: "@dondycles",
+    images: {
+      url: "/summary.png",
+      alt: "John Rod Dondoyano",
+    },
+  },
+  openGraph: {
+    title: "John Rod Dondoyano",
+    description:
+      "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
+    type: "website",
+    siteName: "John Rod Dondoyano",
+    url: "https://johnroddondoyano.vercel.app/",
+    images: [
+      {
+        url: "/summary.png",
+        width: 800,
+        height: 800,
+      },
+      {
+        url: "/summary.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
