@@ -98,7 +98,7 @@ export default function Music() {
         }
       >
         <Embed
-          className="aspect-square"
+          className="aspect-square min-h-[500px]"
           url="https://www.mymusicsheet.com/johnroddondoyano?viewType=sheet&orderBy=createdAt&page=1"
         />
       </Suspense>
