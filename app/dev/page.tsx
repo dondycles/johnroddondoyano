@@ -68,7 +68,7 @@ export default function Home() {
       job: "Front-End Web Dev.",
       img: "/hz.jpg",
       skills: ["NextJS", "NextUI", "ViteJS", "TailwindCSS", "Zustand"],
-      desc: "Built a website for showcasing and minting NFTs. I build the website with NextJS while the minting page was built with ViteJS.",
+      desc: "Built a website for showcasing and minting NFTs with NextJS while the minting page was built with ViteJS.",
       links: [
         { link: "https://heroe-z-kousei.vercel.app", name: "Main Website" },
         {
@@ -97,7 +97,7 @@ export default function Home() {
       job: "Front-End Web Dev.",
       img: "/studiocxgnus.jpg",
       skills: ["HTML", "CSS", "Vanilla JS", "NextJS", "TailwindCSS"],
-      desc: "Built a website for showcasing and minting NFTs. I build the website with Vanilla JS only but later on I learned NextJS and remade it with NextJS.",
+      desc: "Built a website for showcasing and minting NFTs with Vanilla JS only but later on  remade it with NextJS.",
       links: [
         {
           link: "https://studiocxgnus-vanilla.vercel.app/",
@@ -149,8 +149,8 @@ export default function Home() {
         <Badge>Web Development</Badge>
       </h1>
       <p className="max-w-[800px] w-full text-center mx-auto">
-        I have this hobby of creating sleek websites and I aspire to be a
-        professional in this field.
+        A hobby of creating sleek websites and aspires to be a professional in
+        this field.
       </p>
       <Card>
         <CardHeader className="flex-col xs:flex-row items-center gap-4">
@@ -166,16 +166,14 @@ export default function Home() {
         </CardHeader>
         <CardContent>
           <p className="indent-4">
-            I am a self-taught web developer who pulls up an all-nighter, holds
-            a bachelor&apos;s degree in computer engineering. I split my time
-            between music and exploring the world of web development.
+            A self-taught web developer who pulls up an all-nighter, holds a
+            bachelor&apos;s degree in computer engineering. Splits time between
+            music and exploring the world of web development.
           </p>
           <br />
           <p className="indent-4">
-            I really enjoy developing and designing websites! Learning web
-            development is hard at first but later on I managed to enhance my
-            knowledge about HTML, CSS, and JavaScript from YouTube tutorials and
-            online lessons.
+            Really enjoys developing and designing websites. Relied learning
+            HTML, CSS, and JavaScript from YouTube tutorials and online lessons.
           </p>
         </CardContent>
         <CardFooter className="justify-center gap-2">

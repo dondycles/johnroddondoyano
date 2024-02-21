@@ -67,7 +67,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="text-left flex flex-col gap-1 text-muted-foreground">
-          <p className="font-semibold text-foreground">Buy</p>
+          <p className="font-semibold text-foreground">Purchase</p>
           <hr />
           <Link
             href={"https://payhip.com/johnroddondoyano"}

@@ -12,8 +12,8 @@ export default function Biography() {
       </h1>
       <div className="global-y-space max-w-[800px] mx-auto text-left">
         <p className="indent-8">
-          The journey began when he started learning to play the piano at the
-          tender age of 10. Under the guidance of a skilled teacher , he
+          The piano journey began when he started learning to play the piano at
+          the tender age of 10. Under the guidance of a skilled teacher , he
           attended 12 sessions, each lasting an hour. These lessons equipped him
           with the fundamental knowledge of reading notes, playing chords,
           understanding dynamics, timing, and more. He quickly progressed and
@@ -28,6 +28,16 @@ export default function Biography() {
           Gathered a total of 40+ Million views on his YouTube channel with over
           250+ piano covers.
         </p>
+        <p className="indent-8">
+          The success he achieved from just playing a piano turned his dreams
+          into reality.
+        </p>
+        <p>Influences: Claude Debussy, Zedd, and Taylor Swift.</p>
+        <p>Instruments: Piano - Roland RP102</p>
+        <p>
+          Softwares: FL Studio 21, Audacity, MuseScore, and DaVinci Resolve.
+        </p>
+        <p>Camera: Samsung Galaxy S23.</p>
       </div>
       <Footer />
     </main>

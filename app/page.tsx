@@ -58,7 +58,7 @@ export default function Home() {
           <Badge variant={"secondary"}>Average</Badge>
         </div>
       </div>
-      <h2 className="max-w-[800px] mx-auto">
+      <h2 className="max-w-[800px] mx-auto ">
         A growing pianist on YouTube and an aspiring professional in the field
         of web development, driven by a dual passion for music and web
         development, harboring ambitions for a distinguished career trajectory

@@ -40,8 +40,8 @@ export default function Music() {
         <Badge>Music</Badge>
       </h1>
       <p className="max-w-[800px] w-full text-center mx-auto">
-        I create piano covers that are playable by beginners up to intermediate
-        piano players.
+        Piano covers that are playable by beginners up to intermediate piano
+        players.
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-3  gap-4 sm:gap-8">
         {achievements.map((ach, idx) => {
@@ -106,7 +106,7 @@ export default function Music() {
         href={"https://mymusicsheet.com/johnroddondoyano"}
         target="_blank"
       >
-        Visit Website
+        Visit MyMusicSheet
       </Link>
 
       <Footer />
