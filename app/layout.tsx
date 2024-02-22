@@ -4,7 +4,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/shared/nav";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "600", "800"],
@@ -69,6 +69,7 @@ export default function RootLayout({
           <div className="max-h-[100dvh] h-screen w-full flex flex-col overflow-auto leading-7">
             <Nav />
             {children}
+            <SpeedInsights />
           </div>
         </ThemeProvider>
       </body>
