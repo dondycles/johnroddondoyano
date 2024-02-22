@@ -14,10 +14,16 @@ export default {
       title: 'Description',
     },
     {
+      name: 'author',
+      type: 'string',
+      title: 'Author',
+    },
+    {
       name: 'coverImage',
       type: 'image',
       title: 'Cover Image',
     },
+
     {
       name: 'slug',
       type: 'slug',

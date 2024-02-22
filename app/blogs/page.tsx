@@ -33,7 +33,8 @@ async function getBlogs() {
     description,
     _createdAt,
     "slug": slug.current,
-    coverImage
+    coverImage,
+    author
   }`;
 
   const blog = await client.fetch(query);

@@ -21,7 +21,8 @@ async function getBlog(slug: string) {
     description,
     _createdAt,
     "slug": slug.current,
-    coverImage
+    coverImage,
+    author
   }`;
 
   const blog = await client.fetch(query);
@@ -79,23 +80,24 @@ export default async function Blog({ params }: { params: { slug: string } }) {
         </Link>
       </div>
 
-      <div className="prose dark:prose-invert max-w-[800px] w-full mx-auto">
-        <p className="text-muted-foreground text-sm">
-          Posted on {new Date(blog._createdAt).toLocaleDateString()}
-        </p>
+      <div className=" prose  dark:prose-invert max-w-[800px] w-full mx-auto">
         <div>
           <h1 className="mb-0">{blog.title}</h1>
-          <p className="my-0 ">{blog.description}</p>
-          <Image
-            src={imageUrl(blog.coverImage).url()}
-            alt={blog.title}
-            className="mt-2 rounded-[0.5rem] object-cover w-full aspect-video"
-            sizes="(max-width: 768px) 100vw, 700px"
-            priority
-            width={720}
-            height={480}
-          />
+          <p className="mt-0 ">{blog.description}</p>
         </div>
+        <p className="text-muted-foreground text-sm">
+          Posted by {blog.author} on{" "}
+          {new Date(blog._createdAt).toLocaleDateString()}
+        </p>
+        <Image
+          src={imageUrl(blog.coverImage).url()}
+          alt={blog.title}
+          className="mt-2 rounded-[0.5rem] object-cover w-full aspect-video"
+          sizes="(max-width: 768px) 100vw, 700px"
+          priority
+          width={720}
+          height={480}
+        />
         <PortableText value={blog.content} components={PortableTextComponent} />
       </div>
       <Footer />
