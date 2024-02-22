@@ -6,6 +6,9 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { imageUrl } from "@/lib/sanity-image";
 import Link from "next/link";
+
+export const revalidate = 30;
+
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };

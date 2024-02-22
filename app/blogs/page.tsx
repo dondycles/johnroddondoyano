@@ -6,13 +6,15 @@ import { Metadata } from "next";
 import { client } from "@/lib/sanity";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
 import { imageUrl } from "@/lib/sanity-image";
+
+export const revalidate = 30;
+
 export const metadata: Metadata = {
   title: "Blogs | John Rod Dondoyano",
 };
