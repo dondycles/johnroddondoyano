@@ -79,7 +79,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
         </Link>
       </div>
 
-      <div className="prose max-w-[800px] w-full mx-auto">
+      <div className="prose dark:prose-invert max-w-[800px] w-full mx-auto">
         <p className="text-muted-foreground text-sm">
           Posted on {new Date(blog._createdAt).toLocaleDateString()}
         </p>
