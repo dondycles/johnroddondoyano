@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/shared/nav";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import type { Viewport } from "next";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -13,12 +14,14 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+export const viewport: Viewport = {
+  themeColor: "0a0a0a",
+};
 export const metadata: Metadata = {
   title: "John Rod Dondoyano",
   description:
     "A growing pianist on YouTube and an aspiring professional in the field of web development, driven by a dual passion for music and web development, harboring ambitions for a distinguished career trajectory in both domains.",
   metadataBase: new URL("https://johnroddondoyano.com/"),
-  themeColor: "#0a0a0a",
   twitter: {
     title: "John Rod Dondoyano",
     description:
