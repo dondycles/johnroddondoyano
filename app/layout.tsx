@@ -5,6 +5,8 @@ import { ReactNode } from "react";
 import { ThemeProvider } from "@/components/theme-provider";
 import Nav from "@/components/shared/nav";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "600", "800"],
@@ -70,6 +72,7 @@ export default function RootLayout({
             <Nav />
             {children}
             <SpeedInsights />
+            <Analytics />
           </div>
         </ThemeProvider>
       </body>
