@@ -50,7 +50,7 @@ export default async function Blogs() {
         <Badge>Blogs</Badge>
       </h1>
       {blogs ? (
-        <div className="grid grid-cols-2 global-gap">
+        <div className="grid grid-cols-1 sm:grid-cols-2 global-gap">
           {blogs.map((blog) => {
             return (
               <Link key={blog.slug} href={"/blogs/" + blog.slug}>
