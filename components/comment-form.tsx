@@ -15,7 +15,6 @@ import {
 import { Textarea } from "./ui/textarea";
 import { addComment } from "@/actions/addComment";
 import { Input } from "./ui/input";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
@@ -65,10 +64,6 @@ export function CommentForm({
     const { error } = await addComment(values);
     if (error) return error;
     form.reset();
-    route.refresh();
-    setTimeout(() => {
-      route.refresh();
-    }, 2000);
   }
   return (
     <Form {...form}>
