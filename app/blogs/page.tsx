@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 import { imageUrl } from "@/lib/sanity-image";
 
-export const revalidate = 30;
+export const revalidate = 0;
 
 export const metadata: Metadata = {
   title: "Blogs | John Rod Dondoyano",

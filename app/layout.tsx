@@ -7,6 +7,7 @@ import Nav from "@/components/shared/nav";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import type { Viewport } from "next";
+import QueryProvider from "@/components/QueryProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -65,19 +66,21 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} font-poppins antialiased overflow-hidden sm:text-base text-sm `}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <div className="max-h-[100dvh] h-screen w-full flex flex-col overflow-auto leading-7">
-            <Nav />
-            {children}
-            <SpeedInsights />
-            <Analytics />
-          </div>
-        </ThemeProvider>
+        <QueryProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="max-h-[100dvh] h-screen w-full flex flex-col overflow-auto leading-7">
+              <Nav />
+              {children}
+              <SpeedInsights />
+              <Analytics />
+            </div>
+          </ThemeProvider>
+        </QueryProvider>
       </body>
     </html>
   );

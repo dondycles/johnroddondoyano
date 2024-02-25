@@ -1,44 +1,30 @@
 import Footer from "@/components/shared/footer";
 import { Badge } from "@/components/ui/badge";
-import { client } from "@/lib/sanity";
 import { Metadata, ResolvingMetadata } from "next";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { imageUrl } from "@/lib/sanity-image";
 import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CommentForm } from "@/components/comment-form";
+import { getBlog } from "@/actions/getBlog";
 
-export const revalidate = 30;
+export const revalidate = 0;
 
 type Props = {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-async function getBlog(slug: string) {
-  const query = `*[_type=="blog" && slug.current == "${slug}"][0]{
-    title,
-    content,
-    description,
-    _createdAt,
-    "slug": slug.current,
-    coverImage,
-    author
-  }`;
-
-  const blog = await client.fetch(query);
-
-  return blog;
-}
-
 export async function generateMetadata(
-  { params, searchParams }: Props,
+  { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   // read route params
   const slug = params.slug;
 
   // fetch data
-  const blog = await getBlog(params.slug);
+  const blog = await getBlog(slug);
 
   // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
@@ -79,7 +65,6 @@ export default async function Blog({ params }: { params: { slug: string } }) {
           <Badge className="line-clamp-1 w-fit">{blog.title}</Badge>
         </Link>
       </div>
-
       <div className=" prose  dark:prose-invert max-w-[800px] w-full mx-auto">
         <div>
           <h1 className="mb-0">{blog.title}</h1>
@@ -100,6 +85,28 @@ export default async function Blog({ params }: { params: { slug: string } }) {
         />
         <PortableText value={blog.content} components={PortableTextComponent} />
       </div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Leave a comment.</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <CommentForm slug={blog.slug} blogId={blog._id} />
+        </CardContent>
+      </Card>
+      {blog.comments.map((comment: any) => {
+        return (
+          <div
+            key={comment._id}
+            className="w-full p-4 rounded-[0.5rem] border-border border-[1px]"
+          >
+            <p>{comment.name}</p>
+            <p className="text-xs text-muted-foreground">
+              {new Date(comment._createdAt).toLocaleDateString()}
+            </p>
+            <p className="mt-4">{comment.comment}</p>
+          </div>
+        );
+      })}
       <Footer />
     </main>
   );
