@@ -7,6 +7,7 @@ import { client } from "@/lib/sanity";
 import {
   Card,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -51,17 +52,17 @@ export default async function Blogs() {
         <Badge>Blogs</Badge>
       </h1>
       {blogs ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 global-gap">
+        <div className="grid grid-cols-1 global-gap">
           {blogs.map((blog) => {
             return (
               <Link key={blog.slug} href={"/blogs/" + blog.slug}>
-                <Card className=" h-full ">
+                <Card>
                   <CardHeader>
-                    <div className="relative w-full aspect-video mb-4">
+                    <div className="relative w-full aspect-video mb-4 max-h-[200px]">
                       <Image
                         src={imageUrl(blog.coverImage).url()}
                         alt={blog.title}
-                        className="object-cover rounded-[0.5rem]"
+                        className="object-cover rounded-[0.5rem] "
                         fill
                         sizes="(max-width: 768px) 100vw, 700px"
                       />
@@ -69,6 +70,11 @@ export default async function Blogs() {
                     <CardTitle>{blog.title}</CardTitle>
                     <CardDescription>{blog.description}</CardDescription>
                   </CardHeader>
+                  <CardFooter>
+                    <Link className="w-full" href={"/blogs/" + blog.slug}>
+                      <Button className="w-full">Read</Button>
+                    </Link>
+                  </CardFooter>
                 </Card>
               </Link>
             );
