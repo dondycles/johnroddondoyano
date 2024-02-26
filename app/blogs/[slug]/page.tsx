@@ -5,8 +5,6 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { imageUrl } from "@/lib/sanity-image";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CommentForm } from "@/components/comment-form";
 import { getBlog } from "@/actions/getBlog";
 
 export const revalidate = 0;
@@ -32,9 +30,19 @@ export async function generateMetadata(
   return {
     title: blog.title,
     description: blog.description,
-    // openGraph: {
-    //   images: ["/some-specific-page-image.jpg", ...previousImages],
-    // },
+    metadataBase: new URL("https://johnroddondoyano.com/"),
+    twitter: {
+      title: blog.title,
+      description: blog.description,
+    },
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      type: "website",
+      siteName: "John Rod Dondoyano",
+      url: "https://johnroddondoyano.com/",
+      images: [imageUrl(blog.coverImage).url(), ...previousImages],
+    },
   };
 }
 
@@ -54,6 +62,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
       ),
     },
   };
+  console.log(blog);
   return (
     <main className="w-full flex-1 global-padding flex flex-col global-gap">
       <div className="w-fit mx-auto flex flex-row gap-2 items-center">
@@ -85,7 +94,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
         />
         <PortableText value={blog.content} components={PortableTextComponent} />
       </div>
-      <Card>
+      {/* <Card>
         <CardHeader>
           <CardTitle>Leave a comment.</CardTitle>
         </CardHeader>
@@ -106,7 +115,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <p className="mt-4">{comment.comment}</p>
           </div>
         );
-      })}
+      })} */}
       <Footer />
     </main>
   );
