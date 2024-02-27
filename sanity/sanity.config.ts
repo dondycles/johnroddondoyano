@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'johnroddondoyanoblogs',
 
   projectId: 'benk8cgk',
-  dataset: 'production',
+  dataset: 'development',
 
   plugins: [structureTool(), visionTool()],
 
