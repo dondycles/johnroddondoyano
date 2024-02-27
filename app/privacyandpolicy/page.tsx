@@ -17,7 +17,7 @@ export default function PrivacyAndPolicy() {
         <p className="m-0 p-0">Effective Date: February 27, 2024</p>
         <p>
           Thank you for visiting{" "}
-          <Link href={"/https://johnroddondoyano.com"} target="_blank">
+          <Link href={"https://johnroddondoyano.com"} target="_blank">
             https://johnroddondoyano.com
           </Link>{" "}
           (the "Website"). This Privacy Policy explains how we collect, use,
