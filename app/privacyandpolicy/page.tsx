@@ -20,21 +20,22 @@ export default function PrivacyAndPolicy() {
           <Link href={"https://johnroddondoyano.com"} target="_blank">
             https://johnroddondoyano.com
           </Link>{" "}
-          (the "Website"). This Privacy Policy explains how we collect, use,
-          disclose, and safeguard your information when you visit our website.
-          Please read this Privacy Policy carefully. If you do not agree with
-          the terms of this Privacy Policy, please do not access the website.
+          (the &quot;Website&quot;). This Privacy Policy explains how we
+          collect, use, disclose, and safeguard your information when you visit
+          our website. Please read this Privacy Policy carefully. If you do not
+          agree with the terms of this Privacy Policy, please do not access the
+          website.
         </p>
 
         <p>
           We reserve the right to make changes to this Privacy Policy at any
           time and for any reason. We will alert you about any changes by
-          updating the "Effective Date" of this Privacy Policy. You are
-          encouraged to periodically review this Privacy Policy to stay informed
-          of updates. You will be deemed to have been made aware of, will be
-          subject to, and will be deemed to have accepted the changes in any
-          revised Privacy Policy by your continued use of the website after the
-          date such revised Privacy Policy is posted.
+          updating the &quot;Effective Date&quot; of this Privacy Policy. You
+          are encouraged to periodically review this Privacy Policy to stay
+          informed of updates. You will be deemed to have been made aware of,
+          will be subject to, and will be deemed to have accepted the changes in
+          any revised Privacy Policy by your continued use of the website after
+          the date such revised Privacy Policy is posted.
         </p>
 
         <p className="font-semibold">Information We Collect:</p>
@@ -51,7 +52,7 @@ export default function PrivacyAndPolicy() {
         <p className="font-semibold">How We Use Your Information:</p>
         <p>
           We may use the information we collect to: Respond to your inquiries or
-          comments. Analyze trends and improve the website's performance.
+          comments. Analyze trends and improve the website&quot;s performance.
         </p>
         <p>
           We will not sell, rent, or lease your personal information to third
@@ -79,7 +80,7 @@ export default function PrivacyAndPolicy() {
           unauthorized access, use, or disclosure. However, no method of
           transmission over the internet or electronic storage is 100% secure.
         </p>
-        <p className="font-semibold">Children's Privacy:</p>
+        <p className="font-semibold">Children&quot;s Privacy:</p>
         <p>
           The website is not intended for children under the age of 13. We do
           not knowingly collect personal information from children under the age
