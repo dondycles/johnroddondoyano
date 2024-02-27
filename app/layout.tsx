@@ -7,6 +7,7 @@ import Nav from "@/components/shared/nav";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import type { Viewport } from "next";
+import GoogleAdSense from "@/components/GoogleAdsense";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -72,6 +73,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="max-h-[100dvh] h-screen w-full flex flex-col overflow-auto leading-7">
+            <GoogleAdSense />
             <Nav />
             {children}
             <SpeedInsights />
