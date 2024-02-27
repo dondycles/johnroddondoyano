@@ -15,7 +15,6 @@ import {
 import { Textarea } from "./ui/textarea";
 import { addComment } from "@/actions/addComment";
 import { Input } from "./ui/input";
-import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   comment: z
@@ -41,14 +40,6 @@ export function CommentForm({
   blogId: string;
   slug: string;
 }) {
-  const route = useRouter();
-  // const { mutate: mutateComment, isPending } = useMutation({
-  //   mutationKey: ["addComment", slug],
-  //   mutationFn: async (values: z.infer<typeof formSchema>) => onSubmit(values),
-  //   onSuccess: () => {
-  //     location.replace("#comment");
-  //   },
-  // });
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -64,6 +55,7 @@ export function CommentForm({
     const { error } = await addComment(values);
     if (error) return error;
     form.reset();
+    location.reload();
   }
   return (
     <Form {...form}>

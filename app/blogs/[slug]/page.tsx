@@ -6,6 +6,8 @@ import Image from "next/image";
 import { imageUrl } from "@/lib/sanity-image";
 import Link from "next/link";
 import { getBlog } from "@/actions/getBlog";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CommentForm } from "@/components/comment-form";
 
 export const revalidate = 0;
 
@@ -41,7 +43,9 @@ export async function generateMetadata(
       type: "website",
       siteName: "John Rod Dondoyano",
       url: "https://johnroddondoyano.com/",
-      images: [imageUrl(blog.coverImage).url(), ...previousImages],
+      images: blog.coverImage
+        ? [imageUrl(blog.coverImage).url(), ...previousImages]
+        : [...previousImages],
     },
   };
 }
@@ -84,7 +88,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
           {new Date(blog._createdAt).toLocaleDateString()}
         </p>
         <Image
-          src={imageUrl(blog.coverImage).url()}
+          src={blog.coverImage ? imageUrl(blog.coverImage).url() : "/"}
           alt={blog.title}
           className="mt-2 rounded-[0.5rem] object-cover w-full aspect-video"
           sizes="(max-width: 768px) 100vw, 700px"
@@ -94,7 +98,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
         />
         <PortableText value={blog.content} components={PortableTextComponent} />
       </div>
-      {/* <Card>
+      <Card>
         <CardHeader>
           <CardTitle>Leave a comment.</CardTitle>
         </CardHeader>
@@ -115,7 +119,7 @@ export default async function Blog({ params }: { params: { slug: string } }) {
             <p className="mt-4">{comment.comment}</p>
           </div>
         );
-      })} */}
+      })}
       <Footer />
     </main>
   );

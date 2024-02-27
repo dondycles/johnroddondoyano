@@ -55,28 +55,28 @@ export default async function Blogs() {
         <div className="grid grid-cols-1 global-gap">
           {blogs.map((blog) => {
             return (
-              <Link key={blog.slug} href={"/blogs/" + blog.slug}>
-                <Card>
-                  <CardHeader>
-                    <div className="relative w-full aspect-video mb-4 max-h-[200px]">
-                      <Image
-                        src={imageUrl(blog.coverImage).url()}
-                        alt={blog.title}
-                        className="object-cover rounded-[0.5rem] "
-                        fill
-                        sizes="(max-width: 768px) 100vw, 700px"
-                      />
-                    </div>
-                    <CardTitle>{blog.title}</CardTitle>
-                    <CardDescription>{blog.description}</CardDescription>
-                  </CardHeader>
-                  <CardFooter>
-                    <Link className="w-full" href={"/blogs/" + blog.slug}>
-                      <Button className="w-full">Read</Button>
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </Link>
+              <Card key={blog.slug}>
+                <CardHeader>
+                  <div className="relative w-full aspect-video mb-4 max-h-[200px]">
+                    <Image
+                      src={
+                        blog.coverImage ? imageUrl(blog.coverImage).url() : "/"
+                      }
+                      alt={blog.title}
+                      className="object-cover rounded-[0.5rem] "
+                      fill
+                      sizes="(max-width: 768px) 100vw, 700px"
+                    />
+                  </div>
+                  <CardTitle>{blog.title}</CardTitle>
+                  <CardDescription>{blog.description}</CardDescription>
+                </CardHeader>
+                <CardFooter>
+                  <Link className="w-full" href={"/blogs/" + blog.slug}>
+                    <Button className="w-full">Read</Button>
+                  </Link>
+                </CardFooter>
+              </Card>
             );
           })}
         </div>
