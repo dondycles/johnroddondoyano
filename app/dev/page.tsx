@@ -112,9 +112,9 @@ export default function Home() {
   ];
   const otherprojects = [
     {
-      name: "Expen//Save",
+      name: "pennylist.",
       desc: "A web app for tracking expenses and savings at the same with analytics and history.",
-      link: "https://expensave-shadcn.vercel.app",
+      link: "https://pennylist.app",
       skills: [
         "NextJS",
         "Supabase",
@@ -122,8 +122,8 @@ export default function Home() {
         "TailwindCSS",
         "TanStack Query",
       ],
-      img: "/es.png",
-      gh: "https://github.com/dondycles/expensave-shadcn",
+      img: "/pl.png",
+      gh: "https://github.com/dondycles/pennylist-rc",
     },
 
     {
@@ -139,7 +139,7 @@ export default function Home() {
       desc: "A simple web game to ease your anxiety.",
       link: "https://tapxiety.vercel.app/",
       skills: ["NextJS", "NextUI", "TailwindCSS", "Zustand", "Framer Motion"],
-      img: "",
+      img: "/",
       gh: "https://github.com/dondycles/tapxiety",
     },
   ];

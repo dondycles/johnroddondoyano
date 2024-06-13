@@ -9,7 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import img0 from "@/public/gallery/0.webp";
 import img1 from "@/public/gallery/1.webp";
 import img2 from "@/public/gallery/2.webp";
 import img3 from "@/public/gallery/3.webp";
@@ -17,6 +17,8 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: " Biography | John Rod Dondoyano",
 };
+
+const imgs = [img0, img1, img2, img3];
 export default function Biography() {
   return (
     <main className="w-full flex-1 text-center global-padding flex flex-col global-gap">
@@ -115,33 +117,22 @@ export default function Biography() {
       </div>
       <Carousel className=" mx-auto max-w-[600px] w-full aspect-square ">
         <CarouselContent>
-          <CarouselItem className="relative w-full aspect-square">
-            <Image
-              fill
-              sizes="(max-width: 768px) 100vw, 700px"
-              src={img1}
-              alt="John Rod"
-              className="rounded-[0.5rem]"
-            />
-          </CarouselItem>
-          <CarouselItem className="relative w-full aspect-square">
-            <Image
-              fill
-              sizes="(max-width: 768px) 100vw, 700px"
-              src={img2}
-              alt="John Rod"
-              className="rounded-[0.5rem]"
-            />
-          </CarouselItem>
-          <CarouselItem className="relative w-full aspect-square">
-            <Image
-              fill
-              sizes="(max-width: 768px) 100vw, 700px"
-              src={img3}
-              alt="John Rod"
-              className="rounded-[0.5rem]"
-            />
-          </CarouselItem>
+          {imgs.map((img) => {
+            return (
+              <CarouselItem
+                key={img.src}
+                className="relative w-full aspect-square"
+              >
+                <Image
+                  fill
+                  sizes="(max-width: 768px) 100vw, 700px"
+                  src={img}
+                  alt="John Rod"
+                  className="rounded-[0.5rem]"
+                />
+              </CarouselItem>
+            );
+          })}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
