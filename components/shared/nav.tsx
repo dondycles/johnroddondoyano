@@ -26,6 +26,7 @@ import {
 } from "@/components/ui/dialog";
 import { useEffect, useState } from "react";
 import { useModalState } from "@/store";
+import { Checkbox } from "../ui/checkbox";
 export default function Nav() {
   const [showModal, setShowModal] = useState(false);
   const modalState = useModalState();
@@ -97,7 +98,7 @@ export default function Nav() {
           </SheetContent>
         </Sheet>
         <Dialog open={showModal} onOpenChange={setShowModal}>
-          <DialogContent className="px-2 pb-2">
+          <DialogContent className="px-2">
             <DialogHeader className="">
               <DialogTitle>My 2nd Channel For Tutorials</DialogTitle>
               <DialogDescription>
@@ -105,7 +106,7 @@ export default function Nav() {
                 tutorials/walk-throughs!
               </DialogDescription>
             </DialogHeader>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-4">
               <div className="flex gap-4 items-center justify-center">
                 <Image
                   src={sheetbyjrimg}
@@ -116,7 +117,10 @@ export default function Nav() {
                   className="border-[1px] border-border rounded-full"
                 />
                 <Button asChild className="shadow-[0_0_16px_#ffffff88]">
-                  <Link href={"https://youtube.com/@sheetsby_jr"}>
+                  <Link
+                    target="_blank"
+                    href={"https://youtube.com/@sheetsby_jr"}
+                  >
                     Visit channel
                   </Link>
                 </Button>
@@ -132,16 +136,15 @@ export default function Nav() {
                   allowFullScreen
                 ></iframe>
               </div>
-
-              <Button
-                onClick={() => {
-                  modalState.setNeverAgain();
-                  setShowModal(false);
-                }}
-                variant={"outline"}
-              >
-                Close and never show again
-              </Button>
+              <div className="flex items-center space-x-2 mx-auto opacity-50">
+                <Checkbox onCheckedChange={modalState.setNeverAgain} />
+                <label
+                  htmlFor="terms"
+                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                >
+                  Never show again
+                </label>
+              </div>
             </div>
           </DialogContent>
         </Dialog>
