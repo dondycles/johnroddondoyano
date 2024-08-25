@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import icon from "@/app/favicon.ico";
 import sheetbyjrimg from "@/public/sheetsbyjr.png";
+import sheetbyjrbannerimg from "@/public/sheetsbyjrbanner.png";
 import { MdOutlineMenu } from "react-icons/md";
 import { ThemeBtn } from "@/components/theme-btn";
 import Socials from "./socials";
@@ -99,7 +100,7 @@ export default function Nav() {
           </SheetContent>
         </Sheet>
         <Dialog open={showModal} onOpenChange={setShowModal}>
-          <DialogContent className="px-2">
+          <DialogContent className="px-2 pb-2">
             <DialogHeader className="">
               <DialogTitle>My 2nd Channel For Tutorials</DialogTitle>
               <DialogDescription>
@@ -107,17 +108,23 @@ export default function Nav() {
                 tutorials/walk-throughs!
               </DialogDescription>
             </DialogHeader>
-            <div className="flex flex-col gap-4">
-              <div className="flex gap-4 items-center justify-center">
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-4 items-center justify-center relative p-2">
+                <Image
+                  src={sheetbyjrbannerimg}
+                  alt="Sheet By JR"
+                  quality={100}
+                  className="border-[1px] border-border absolute top-0 left-0 w-full h-full object-cover rounded-md opacity-25"
+                />
                 <Image
                   src={sheetbyjrimg}
                   alt="Sheet By JR"
                   width={114}
                   height={114}
                   quality={100}
-                  className="border-[1px] border-border rounded-full"
+                  className="border-[1px] border-border rounded-full z-10"
                 />
-                <Button asChild className="shadow-[0_0_16px_#ffffff88]">
+                <Button asChild className="shadow-[0_0_16px_#ffffff88] z-10">
                   <Link
                     target="_blank"
                     href={"https://youtube.com/@sheetsby_jr"}
@@ -141,7 +148,7 @@ export default function Nav() {
                 <Checkbox onCheckedChange={modalState.setNeverAgain} />
                 <label
                   htmlFor="terms"
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  className="text-xs font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
                   Never show again
                 </label>
