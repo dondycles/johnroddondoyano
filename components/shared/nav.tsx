@@ -38,7 +38,8 @@ export default function Nav() {
       setShowModal(true);
     }, 2000);
     return () => clearTimeout(timeout);
-  }, [modalState.neverAgain]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <header className=" top-0 left-0 w-full nav-padding z-10 backdrop-blur-sm bg-background/80 sticky border-b-border border-b-[1px] ">
       <div className="flex items-center justify-between ">
