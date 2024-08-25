@@ -27,6 +27,7 @@ import {
 import { useEffect, useState } from "react";
 import { useModalState } from "@/store";
 import { Checkbox } from "../ui/checkbox";
+import { ExternalLink } from "lucide-react";
 export default function Nav() {
   const [showModal, setShowModal] = useState(false);
   const modalState = useModalState();
@@ -121,7 +122,7 @@ export default function Nav() {
                     target="_blank"
                     href={"https://youtube.com/@sheetsby_jr"}
                   >
-                    Visit channel
+                    Visit channel <ExternalLink size={16} className="ml-1" />
                   </Link>
                 </Button>
               </div>
