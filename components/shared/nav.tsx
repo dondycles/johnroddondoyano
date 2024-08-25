@@ -3,6 +3,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
 import icon from "@/app/favicon.ico";
+import sheetbyjrimg from "@/public/sheetsbyjr.png";
 import { MdOutlineMenu } from "react-icons/md";
 import { ThemeBtn } from "@/components/theme-btn";
 import Socials from "./socials";
@@ -16,7 +17,25 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import JrLogo from "./jr-logo";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { useEffect, useState } from "react";
+import { useModalState } from "@/store";
 export default function Nav() {
+  const [showModal, setShowModal] = useState(false);
+  const modalState = useModalState();
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (modalState.neverAgain) return;
+      setShowModal(true);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  }, [modalState.neverAgain]);
   return (
     <header className=" top-0 left-0 w-full nav-padding z-10 backdrop-blur-sm bg-background/80 sticky border-b-border border-b-[1px] ">
       <div className="flex items-center justify-between ">
@@ -77,6 +96,55 @@ export default function Nav() {
             </div>
           </SheetContent>
         </Sheet>
+        <Dialog open={showModal} onOpenChange={setShowModal}>
+          <DialogContent className="px-2 pb-2">
+            <DialogHeader className="">
+              <DialogTitle>My 2nd Channel For Tutorials</DialogTitle>
+              <DialogDescription>
+                I created another channel dedicated for piano
+                tutorials/walk-throughs!
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex flex-col gap-2">
+              <div className="flex gap-4 items-center justify-center">
+                <Image
+                  src={sheetbyjrimg}
+                  alt="Sheet By JR"
+                  width={114}
+                  height={114}
+                  quality={100}
+                  className="border-[1px] border-border rounded-full"
+                />
+                <Button asChild className="shadow-[0_0_16px_#ffffff88]">
+                  <Link href={"https://youtube.com/@sheetsby_jr"}>
+                    Visit channel
+                  </Link>
+                </Button>
+              </div>
+
+              <div className="aspect-video flex overflow-hidden rounded-md">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/ijaoxf5x8Xw?si=biLdrCZMBY840_Fs"
+                  title="A Thousand Years"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              <Button
+                onClick={() => {
+                  modalState.setNeverAgain();
+                  setShowModal(false);
+                }}
+                variant={"outline"}
+              >
+                Close and never show again
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </header>
   );
